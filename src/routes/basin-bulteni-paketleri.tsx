@@ -85,7 +85,7 @@ function BasinBulteniPaketleri() {
                 <li className="flex gap-3"><span className="text-accent">✓</span> 2 Görsel Ekleyebilme İmkanı</li>
                 <li className="flex gap-3"><span className="text-accent">✓</span> 48 Saat İçinde Yayın</li>
               </ul>
-              <button className="w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Buradan Başlayın</button>
+              <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="block text-center w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Buradan Başlayın</a>
             </div>
             
             <div className="p-10 border-b-2 lg:border-b-0 lg:border-r-2 border-ink bg-ink text-paper flex flex-col relative overflow-hidden">
@@ -103,7 +103,7 @@ function BasinBulteniPaketleri() {
                 <li className="flex gap-3"><span className="text-accent">✓</span> Editoryal İnceleme ve Başlık Optimizasyonu</li>
                 <li className="flex gap-3"><span className="text-accent">✓</span> Saniyesine Kadar Ambargo Ayarı</li>
               </ul>
-              <button className="w-full bg-accent text-white py-4 font-bold uppercase tracking-tighter hover:bg-white hover:text-ink transition-all">Premium'a Geç</button>
+              <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="block text-center w-full bg-accent text-white py-4 font-bold uppercase tracking-tighter hover:bg-white hover:text-ink transition-all">Premium'a Geç</a>
             </div>
             
             <div className="p-10 flex flex-col">
@@ -117,7 +117,7 @@ function BasinBulteniPaketleri() {
                 <li className="flex gap-3"><span className="text-accent">✓</span> Hedefli Gazeteci Listeleri (CRM)</li>
                 <li className="flex gap-3"><span className="text-accent">✓</span> API ve Webhook Entegrasyonları</li>
               </ul>
-              <button className="w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Satışla İletişime Geç</button>
+              <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="block text-center w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Satışla İletişime Geç</a>
             </div>
           </div>
         </div>
@@ -199,10 +199,10 @@ function BasinBulteniPaketleri() {
                   </ul>
                 </div>
                 <div className="p-6 border-t-2 border-ink bg-paper mt-auto">
-                  <button className="w-full flex items-center justify-between border-2 border-ink bg-white px-6 py-3 font-bold uppercase tracking-widest text-xs hover:bg-ink hover:text-white transition-colors group">
+                  <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between border-2 border-ink bg-white px-6 py-3 font-bold uppercase tracking-widest text-xs hover:bg-ink hover:text-white transition-colors group">
                     İncele
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -217,9 +217,9 @@ function BasinBulteniPaketleri() {
             <h3 className="font-display text-4xl uppercase mb-2">Özel Bir Çözüme mi İhtiyacınız Var?</h3>
             <p className="text-lg font-medium opacity-90 max-w-2xl">Yıllık anlaşmalar, entegre API erişimi veya 10'dan fazla marka yönetimi için kurumsal satış ekibimizle görüşün.</p>
           </div>
-          <button className="whitespace-nowrap border-2 border-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-accent transition-colors">
+          <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="inline-block text-center whitespace-nowrap border-2 border-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-accent transition-colors">
             Özel Teklif Al
-          </button>
+          </a>
         </div>
       </section>
 
