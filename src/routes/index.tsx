@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
-      { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır. En iyi online basın bülteni dağıtımı servisi." },
+      { name: "description", content: "En iyi online basın bülteni dağıtımı servisi Breles ile markanızı duyurun! Online basın bülteni servisi sayesinde geniş kitlelere ulaşarak haberlerinizi etkili bir şekilde yayınlayın." },
       { property: "og:title", content: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
       { property: "og:description", content: "Duyurularınızı küresel manşetlere dönüştürün." },
       { property: "og:url", content: "https://basin-bulteni.com" },
