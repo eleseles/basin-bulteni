@@ -105,20 +105,20 @@ function BlogPostPage() {
       </div>
 
       <div className="px-6 py-16 lg:py-24 max-w-3xl mx-auto">
-        <div className="prose prose-xl prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:leading-[1.1] prose-a:text-accent prose-a:no-underline hover:prose-a:underline font-medium opacity-90 max-w-none">
+        <div className="max-w-none">
           {/* A simple Markdown parser substitute since we just have headers and text in mock data */}
           {post.content.split('\n').map((paragraph, index) => {
             if (paragraph.startsWith('### ')) {
-              return <h3 key={index} className="text-4xl mt-16 mb-8">{paragraph.replace('### ', '')}</h3>;
+              return <h3 key={index} className="font-display text-3xl lg:text-5xl uppercase tracking-tighter leading-[1.1] mt-16 mb-8">{paragraph.replace('### ', '')}</h3>;
             }
             if (paragraph.startsWith('- ')) {
-              return <li key={index} className="ml-4 mb-3 leading-relaxed">{paragraph.replace('- ', '').replace(/\*(.*?)\*/g, '<strong>$1</strong>')}</li>;
+              return <li key={index} className="ml-4 mb-3 text-xl leading-relaxed text-ink/80 font-medium" dangerouslySetInnerHTML={{ __html: paragraph.replace('- ', '').replace(/\*(.*?)\*/g, '<strong class="text-ink font-bold">$1</strong>') }} />;
             }
             if (paragraph.startsWith('1. ') || paragraph.startsWith('2. ') || paragraph.startsWith('3. ') || paragraph.startsWith('4. ') || paragraph.startsWith('5. ')) {
-              return <li key={index} className="ml-4 mb-3 font-bold">{paragraph.replace(/\*(.*?)\*/g, '$1')}</li>;
+              return <li key={index} className="ml-4 mb-3 text-xl leading-relaxed text-ink/80 font-medium" dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*(.*?)\*/g, '<strong class="text-ink font-bold">$1</strong>') }} />;
             }
             if (paragraph.trim() === '') return null;
-            return <p key={index} className="mb-8 leading-relaxed">{paragraph.replace(/\*(.*?)\*/g, '<strong>$1</strong>')}</p>;
+            return <p key={index} className="text-xl lg:text-2xl leading-relaxed mb-8 text-ink/80 font-medium text-pretty" dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*(.*?)\*/g, '<strong class="text-ink font-bold">$1</strong>') }} />;
           })}
         </div>
       </div>
