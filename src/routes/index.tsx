@@ -29,7 +29,7 @@ function Index() {
             <div className="inline-block self-start bg-accent text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6 animate-ink">
               Doğrudan Dağıtım Motoru
             </div>
-            <h1 className="font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.85] uppercase tracking-tighter animate-ink [animation-delay:100ms]">
+            <h1 className="font-display text-[clamp(3rem,8vw,7.5rem)] leading-none uppercase tracking-tighter animate-ink [animation-delay:100ms] mb-2">
               Online Basın <br />Bülteni Dağıtımı <br />Servisi
             </h1>
             <p className="mt-8 max-w-xl text-xl font-medium leading-tight text-pretty animate-ink [animation-delay:200ms]">
