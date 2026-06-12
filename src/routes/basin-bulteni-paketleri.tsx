@@ -56,15 +56,15 @@ function BasinBulteniPaketleri() {
   return (
     <>
       {/* 2. Hero */}
-      <header className="border-b-2 border-ink px-6 py-24 bg-white">
+      <header className="border-b-2 border-ink px-6 py-32 lg:py-40 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block bg-accent text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6">
+          <div className="inline-block bg-accent text-white px-4 py-2 text-sm font-bold uppercase tracking-widest mb-10">
             Şeffaf Fiyatlandırma
           </div>
-          <h1 className="font-display text-[clamp(4rem,8vw,8rem)] leading-[0.85] uppercase tracking-tighter mb-8">
+          <h1 className="font-display text-[clamp(4rem,8vw,8rem)] leading-none uppercase tracking-tighter mb-12">
             Basın Bülteni <br />Paketleri
           </h1>
-          <p className="max-w-2xl mx-auto text-xl font-medium opacity-80">
+          <p className="max-w-2xl mx-auto text-2xl font-medium opacity-80">
             Gizli ücret yok, sürpriz yok. Sadece haberinizin ulaşmasını istediğiniz kitleye göre tasarlanmış saf dağıtım gücü.
           </p>
         </div>
