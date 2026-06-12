@@ -81,10 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır." },
       { property: "og:title", content: "Breles — Online Basın Bülteni Dağıtımı" },
       { property: "og:description", content: "Duyurularınızı küresel manşetlere dönüştürün. 4.500'den fazla premium yayına doğrudan dağıtım." },
+      { property: "og:url", content: "https://basin-bulteni.com" },
+      { property: "og:site_name", content: "Basın Bülteni" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "canonical", href: "https://basin-bulteni.com" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

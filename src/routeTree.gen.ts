@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as BasinBulteniPaketleriRouteImport } from './routes/basin-bulteni-paketleri'
 import { Route as IndexRouteImport } from './routes/index'
 
+const BasinBulteniPaketleriRoute = BasinBulteniPaketleriRouteImport.update({
+  id: '/basin-bulteni-paketleri',
+  path: '/basin-bulteni-paketleri',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +25,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/basin-bulteni-paketleri': typeof BasinBulteniPaketleriRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/basin-bulteni-paketleri': typeof BasinBulteniPaketleriRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/basin-bulteni-paketleri': typeof BasinBulteniPaketleriRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/basin-bulteni-paketleri'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/basin-bulteni-paketleri'
+  id: '__root__' | '/' | '/basin-bulteni-paketleri'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BasinBulteniPaketleriRoute: typeof BasinBulteniPaketleriRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/basin-bulteni-paketleri': {
+      id: '/basin-bulteni-paketleri'
+      path: '/basin-bulteni-paketleri'
+      fullPath: '/basin-bulteni-paketleri'
+      preLoaderRoute: typeof BasinBulteniPaketleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BasinBulteniPaketleriRoute: BasinBulteniPaketleriRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

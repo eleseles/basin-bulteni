@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import networkMap from "@/assets/network-map.jpg";
 
 export const Route = createFileRoute("/")({
@@ -23,7 +23,7 @@ function Index() {
         <span className="font-display text-3xl tracking-tighter uppercase">Breles</span>
         <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
           <a href="#distribution" className="hover:text-accent transition-colors">Dağıtım</a>
-          <a href="#pricing" className="hover:text-accent transition-colors">Fiyatlandırma</a>
+          <Link to="/basin-bulteni-paketleri" className="hover:text-accent transition-colors">Fiyatlandırma</Link>
           <a href="#faq" className="hover:text-accent transition-colors">SSS</a>
         </div>
         <button className="bg-ink text-paper px-6 py-2 text-sm font-bold uppercase tracking-tighter hover:bg-accent transition-colors">
