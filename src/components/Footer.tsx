@@ -24,7 +24,8 @@ export function Footer() {
       <div className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8">
           <div className="col-span-2 lg:col-span-2">
-            <Link to="/" className="font-display text-5xl tracking-tighter uppercase mb-6 block hover:text-accent transition-colors">
+            <Link to="/" className="font-display text-5xl tracking-tighter uppercase mb-6 flex items-center gap-4 hover:text-accent transition-colors w-fit">
+              <img src="https://basin-bulteni.com/logo.png" alt="Breles Logo" className="h-12 w-auto invert" />
               Breles
             </Link>
             <p className="font-medium opacity-60 max-w-sm mb-8 text-sm leading-relaxed">

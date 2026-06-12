@@ -3,7 +3,8 @@ import { Link } from "@tanstack/react-router";
 export function Header() {
   return (
     <nav className="sticky top-0 z-50 bg-background border-b-2 border-ink px-6 py-4 flex justify-between items-center">
-      <Link to="/" className="font-display text-3xl tracking-tighter uppercase hover:text-accent transition-colors">
+      <Link to="/" className="font-display text-3xl tracking-tighter uppercase hover:text-accent transition-colors flex items-center gap-3">
+        <img src="https://basin-bulteni.com/logo.png" alt="Breles Logo" className="h-8 w-auto" />
         Breles
       </Link>
       <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
