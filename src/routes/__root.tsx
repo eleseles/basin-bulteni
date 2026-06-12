@@ -80,10 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "Breles — Online Basın Bülteni Dağıtımı" },
+        { title: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
         { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır." },
         { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
-        { property: "og:title", content: "Breles — Online Basın Bülteni Dağıtımı" },
+        { property: "og:title", content: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
         { property: "og:description", content: "Duyurularınızı küresel manşetlere dönüştürün. 4.500'den fazla premium yayına doğrudan dağıtım." },
         { property: "og:url", content: canonicalUrl },
         { property: "og:site_name", content: "Breles" },

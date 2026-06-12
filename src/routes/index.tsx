@@ -4,9 +4,9 @@ import networkMap from "@/assets/network-map.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Breles — Online Basın Bülteni Dağıtımı" },
+      { title: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
       { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır." },
-      { property: "og:title", content: "Breles — Online Basın Bülteni Dağıtımı" },
+      { property: "og:title", content: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
       { property: "og:description", content: "Duyurularınızı küresel manşetlere dönüştürün." },
       { property: "og:url", content: "https://basin-bulteni.com" },
     ],
