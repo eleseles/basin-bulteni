@@ -102,7 +102,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Breles Dağıtım A.Ş.",
+            "name": "Online Basın Bülteni Dağıtımı Servisi - Breles",
+            "legalName": "Breles İletişim Dağıtım ve Yazılım A.Ş.",
             "url": "https://basin-bulteni.com",
             "logo": "https://basin-bulteni.com/logo.png",
             "address": {

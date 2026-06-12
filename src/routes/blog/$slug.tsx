@@ -37,7 +37,7 @@ export const Route = createFileRoute("/blog/$slug")({
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Breles Dağıtım A.Ş.",
+              "name": "Online Basın Bülteni Dağıtımı Servisi - Breles",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://basin-bulteni.com/logo.png"
