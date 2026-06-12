@@ -25,8 +25,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8">
           <div className="col-span-2 lg:col-span-2">
             <Link to="/" className="font-display text-5xl tracking-tighter uppercase mb-6 flex items-center gap-4 hover:text-accent transition-colors w-fit">
-              <img src="https://basin-bulteni.com/logo.png" alt="Breles Logo" className="h-12 w-auto invert" />
-              Breles
+              <img src="/@fs/Users/eles/.gemini/antigravity-ide/brain/48ab4e5f-b73a-4b64-a62b-d277a9954760/breles_logo_text_1781296570323.png" alt="Breles Logo" className="h-10 w-auto invert contrast-200 mix-blend-screen" />
             </Link>
             <p className="font-medium opacity-60 max-w-sm mb-8 text-sm leading-relaxed">
               Dünyanın en prestijli haber merkezlerine doğrudan erişim sağlayan, veri odaklı basın bülteni dağıtım motoru.
