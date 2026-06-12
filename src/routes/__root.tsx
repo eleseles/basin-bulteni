@@ -91,6 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [
+        { rel: "icon", href: "/@fs/Users/eles/.gemini/antigravity-ide/brain/48ab4e5f-b73a-4b64-a62b-d277a9954760/breles_logo_1781296477954.png" },
         { rel: "stylesheet", href: appCss },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
