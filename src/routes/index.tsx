@@ -189,17 +189,49 @@ function Index() {
       </section>
 
       {/* 9. Industries */}
-      <section className="border-b-2 border-ink bg-paper px-6 py-24">
+      <section className="border-b-2 border-ink bg-paper px-6 py-24 lg:py-32">
         <div className="max-w-7xl mx-auto">
-          <div className="text-xs font-bold uppercase tracking-widest mb-4">Hizmet Verdiğimiz Sektörler</div>
-          <h2 className="font-display text-5xl lg:text-6xl uppercase mb-12 max-w-3xl leading-[0.95]">
-            Uzman masalar. <span className="text-accent">Uzmanlaşmış etki.</span>
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {["Fintech", "Kripto & Web3", "SaaS", "Biyoteknoloji", "İklim", "Tüketici", "Donanım", "Yapay Zeka / ML", "Sağlık", "Gayrimenkul", "Oyun", "Medya & Eğlence"].map((tag) => (
-              <span key={tag} className="border-2 border-ink px-5 py-3 font-bold uppercase tracking-widest text-sm hover:bg-ink hover:text-paper transition-colors cursor-default">
-                {tag}
-              </span>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest mb-4 text-accent">Hizmet Verdiğimiz Sektörler</div>
+              <h2 className="font-display text-5xl lg:text-7xl uppercase max-w-3xl leading-[0.95]">
+                Uzman masalar.<br />Uzmanlaşmış etki.
+              </h2>
+            </div>
+            <p className="text-lg font-medium opacity-80 max-w-md pb-2">
+              Sadece genel haber dağıtmıyoruz. Her sektöre özel inşa edilmiş birinci sınıf medya ağları ve doğrudan gazeteci iletişim kanallarıyla çalışıyoruz.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-l-2 border-t-2 border-ink bg-white">
+            {[
+              { n: "Fintech", d: "Ödeme sistemleri, neobankalar ve finansal altyapı girişimleri." },
+              { n: "Kripto & Web3", d: "Borsalar, DeFi protokolleri ve blockchain ağları." },
+              { n: "SaaS", d: "B2B yazılımlar, kurumsal çözümler ve bulut platformları." },
+              { n: "Biyoteknoloji", d: "İlaç geliştirmeleri, sağlık teknolojileri ve Ar-Ge." },
+              { n: "İklim", d: "Yeşil enerji, karbon ofset ve sürdürülebilirlik vizyonu." },
+              { n: "Tüketici", d: "D2C markalar, giyilebilir teknolojiler ve perakende." },
+              { n: "Donanım", d: "Yarı iletkenler, donanım girişimleri ve endüstriyel robotik." },
+              { n: "Yapay Zeka / ML", d: "Büyük dil modelleri, üretken yapay zeka ve veritabanları." },
+              { n: "Sağlık", d: "Dijital sağlık platformları, tele-tıp ve medikal inovasyon." },
+              { n: "Gayrimenkul", d: "PropTech girişimleri, ticari gayrimenkul ve yatırım fonları." },
+              { n: "Oyun", d: "Oyun stüdyoları, e-spor takımları ve yeni nesil yayıncılar." },
+              { n: "Medya", d: "Yayın platformları, yaratıcı ekonomiler ve prodüksiyon şirketleri." },
+            ].map((sector, i) => (
+              <div key={sector.n} className="border-r-2 border-b-2 border-ink p-8 lg:p-10 group hover:bg-ink hover:text-white transition-all duration-300 flex flex-col justify-between min-h-[280px]">
+                <div>
+                  <div className="text-sm font-bold opacity-30 group-hover:text-accent group-hover:opacity-100 transition-colors uppercase tracking-widest mb-6">
+                    {(i+1).toString().padStart(2, '0')}
+                  </div>
+                  <div className="font-display text-3xl lg:text-4xl uppercase leading-tight mb-4">
+                    {sector.n}
+                  </div>
+                  <p className="text-sm font-medium opacity-80 group-hover:opacity-100 leading-relaxed mb-8">
+                    {sector.d}
+                  </p>
+                </div>
+                <div className="w-12 h-1 bg-ink group-hover:bg-accent group-hover:w-full transition-all duration-500 ease-out" />
+              </div>
             ))}
           </div>
         </div>
