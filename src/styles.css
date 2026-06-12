@@ -30,7 +30,7 @@
   --color-ring: var(--ring);
   --color-ink: var(--ink);
   --color-paper: var(--paper);
-  --font-display: "Anton", sans-serif;
+  --font-display: "Oswald", sans-serif;
   --font-sans: "Inter", sans-serif;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
