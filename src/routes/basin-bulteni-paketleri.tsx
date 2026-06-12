@@ -23,25 +23,25 @@ export const Route = createFileRoute("/basin-bulteni-paketleri")({
             "offerCount": "3",
             "lowPrice": "499",
             "highPrice": "3500",
-            "priceCurrency": "USD",
+            "priceCurrency": "TRY",
             "offers": [
               {
                 "@type": "Offer",
                 "name": "Standart Paket",
                 "price": "499",
-                "priceCurrency": "USD"
+                "priceCurrency": "TRY"
               },
               {
                 "@type": "Offer",
                 "name": "Premium Paket",
                 "price": "1250",
-                "priceCurrency": "USD"
+                "priceCurrency": "TRY"
               },
               {
                 "@type": "Offer",
                 "name": "Ajans Paketi",
                 "price": "3500",
-                "priceCurrency": "USD"
+                "priceCurrency": "TRY"
               }
             ]
           }
@@ -76,7 +76,7 @@ function BasinBulteniPaketleri() {
           <div className="grid lg:grid-cols-3 border-2 border-ink bg-white">
             <div className="p-10 border-b-2 lg:border-b-0 lg:border-r-2 border-ink flex flex-col">
               <div className="uppercase font-bold tracking-widest text-xs mb-2">Standart</div>
-              <div className="font-display text-6xl mb-8">$499<span className="text-xl">/bülten</span></div>
+              <div className="font-display text-6xl mb-8">499 ₺<span className="text-xl">/bülten</span></div>
               <p className="text-sm font-medium opacity-80 mb-8">Ulusal çapta ses getirmek ve arama motorlarında görünürlük kazanmak isteyen markalar için ideal başlangıç.</p>
               <ul className="space-y-4 mb-12 flex-grow font-semibold text-sm">
                 <li className="flex gap-3"><span className="text-accent">✓</span> 400+ Haber Kaynağı</li>
@@ -93,7 +93,7 @@ function BasinBulteniPaketleri() {
                 Önerilen
               </div>
               <div className="uppercase font-bold tracking-widest text-xs mb-2 text-accent">En Popüler</div>
-              <div className="font-display text-6xl mb-8 text-white">$1,250<span className="text-xl opacity-50">/bülten</span></div>
+              <div className="font-display text-6xl mb-8 text-white">1.250 ₺<span className="text-xl opacity-50">/bülten</span></div>
               <p className="text-sm font-medium opacity-80 mb-8 text-paper/80">Sektöründe liderliği hedefleyen ve ana akım küresel finansal medyanın dikkatini çekmek isteyen şirketler için.</p>
               <ul className="space-y-4 mb-12 flex-grow font-semibold text-sm">
                 <li className="flex gap-3"><span className="text-accent">✓</span> 1.200+ Haber Kaynağı</li>
@@ -108,7 +108,7 @@ function BasinBulteniPaketleri() {
             
             <div className="p-10 flex flex-col">
               <div className="uppercase font-bold tracking-widest text-xs mb-2">Ajans</div>
-              <div className="font-display text-6xl mb-8">$3,500<span className="text-xl">/aylık</span></div>
+              <div className="font-display text-6xl mb-8">3.500 ₺<span className="text-xl">/aylık</span></div>
               <p className="text-sm font-medium opacity-80 mb-8">Birden fazla müşterisi olan PR ajansları ve sürekli iletişim faaliyeti yürüten kurumsal markalar için limitsiz güç.</p>
               <ul className="space-y-4 mb-12 flex-grow font-semibold text-sm">
                 <li className="flex gap-3"><span className="text-accent">✓</span> Sınırsız Bülten Gönderimi</li>
@@ -239,9 +239,9 @@ function BasinBulteniPaketleri() {
               </thead>
               <tbody className="text-sm font-semibold">
                 {[
-                  ["Yapay Zeka Başlık Optimizasyonu", "Editörlerimiz ve AI araçlarımızla başlığınızı en yüksek açılma oranına göre yeniden yazarız.", "$49"],
-                  ["Profesyonel Çeviri (Yerel)", "Bülteninizi hedef ülkenin ana diline gazetecilik standartlarında çeviririz.", "$150 / dil"],
-                  ["Özel Gazeteci Pitch'i", "Haberi kendi özel ağımızdaki 50 tier-1 gazeteciye doğrudan ve birebir e-postalarız.", "$300"],
+                  ["Yapay Zeka Başlık Optimizasyonu", "Editörlerimiz ve AI araçlarımızla başlığınızı en yüksek açılma oranına göre yeniden yazarız.", "49 ₺"],
+                  ["Profesyonel Çeviri (Yerel)", "Bülteninizi hedef ülkenin ana diline gazetecilik standartlarında çeviririz.", "150 ₺ / dil"],
+                  ["Özel Gazeteci Pitch'i", "Haberi kendi özel ağımızdaki 50 tier-1 gazeteciye doğrudan ve birebir e-postalarız.", "300 ₺"],
                   ["Multimedya Prodüksiyonu", "Bülteninize eklenecek profesyonel şirket veya ürün tanıtım videosunun hazırlanması.", "Teklif Alın"],
                 ].map((row, i) => (
                   <tr key={row[0]} className={i < 3 ? "border-b-2 border-ink" : ""}>
