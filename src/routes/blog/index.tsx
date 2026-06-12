@@ -19,26 +19,30 @@ function BlogIndex() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <header className="border-b-2 border-ink px-6 py-24 bg-paper">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-12">
-          <div>
-            <div className="inline-block bg-accent text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6">
-              Masadan Notlar
+      <header className="border-b-2 border-ink bg-white px-6 py-24 lg:py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[1.5fr_1fr] gap-12 items-end">
+            <div>
+              <div className="inline-block bg-accent text-white px-4 py-2 text-sm font-bold uppercase tracking-widest mb-8">
+                Masadan Notlar
+              </div>
+              <h1 className="font-display text-[clamp(4rem,8vw,8rem)] leading-[1.1] uppercase tracking-tighter mb-8">
+                PR<br />Araştırmaları
+              </h1>
+              <p className="text-2xl font-medium opacity-80 max-w-xl">
+                Eski haber merkezi editörlerimizden ve ajans uzmanlarımızdan basın bülteni stratejileri, vaka çalışmaları ve sektör verileri.
+              </p>
             </div>
-            <h1 className="font-display text-6xl lg:text-8xl uppercase leading-[0.9] tracking-tighter mb-6">
-              PR<br />Araştırmaları
-            </h1>
-            <p className="text-xl font-medium opacity-80 max-w-lg">
-              Eski haber merkezi editörlerimizden ve ajans uzmanlarımızdan basın bülteni stratejileri, vaka çalışmaları ve sektör verileri.
-            </p>
-          </div>
-          
-          <div className="hidden md:flex gap-4">
-            {["Tümü", "Rehber", "Saha Notları", "Veri"].map((cat) => (
-              <button key={cat} className="border-2 border-ink px-4 py-2 text-xs font-bold uppercase tracking-widest hover:bg-ink hover:text-white transition-colors">
-                {cat}
-              </button>
-            ))}
+            
+            <div className="flex flex-col gap-3 pb-2">
+              <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Kategorileri Filtrele</div>
+              {["Tümü", "Rehber", "Saha Notları", "Veri"].map((cat, i) => (
+                <button key={cat} className={`flex items-center justify-between border-2 border-ink px-6 py-4 font-bold uppercase tracking-widest transition-all ${i === 0 ? "bg-ink text-white" : "hover:bg-accent hover:text-white hover:border-accent"}`}>
+                  <span>{cat}</span>
+                  <span className="text-lg leading-none">→</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </header>
@@ -51,12 +55,12 @@ function BlogIndex() {
             <span className="w-1 h-1 bg-ink rounded-full"></span>
             <span>{blogPosts[0].date}</span>
           </div>
-          <h2 className="font-display text-4xl lg:text-6xl uppercase leading-[0.95] mb-6">
+          <h2 className="font-display text-5xl lg:text-6xl uppercase leading-[1.1] mb-6">
             <Link to="/blog/$slug" params={{ slug: blogPosts[0].slug }} className="hover:text-accent transition-colors">
               {blogPosts[0].title}
             </Link>
           </h2>
-          <p className="text-lg font-medium opacity-80 mb-10 max-w-xl">
+          <p className="text-xl font-medium opacity-80 mb-10 max-w-xl">
             {blogPosts[0].excerpt}
           </p>
           <div className="flex items-center gap-4 mt-auto">
@@ -83,29 +87,26 @@ function BlogIndex() {
       </section>
 
       {/* Grid Posts */}
-      <section className="px-6 py-24 bg-white">
+      <section className="px-6 py-24 bg-paper">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 border-l-2 border-t-2 border-ink bg-white">
             {blogPosts.slice(1).map((post) => (
-              <article key={post.slug} className="group flex flex-col h-full border-2 border-transparent hover:border-ink p-8 transition-colors -m-8">
-                <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest opacity-70 mb-6">
+              <article key={post.slug} className="group border-r-2 border-b-2 border-ink p-8 lg:p-10 flex flex-col hover:bg-ink hover:text-white transition-all duration-300 relative z-10 hover:z-20">
+                <div className="flex items-center justify-between text-xs font-bold uppercase tracking-widest opacity-70 group-hover:text-accent group-hover:opacity-100 transition-colors mb-8">
                   <span>{post.category}</span>
-                  <span className="w-1 h-1 bg-ink rounded-full"></span>
                   <span>{post.date}</span>
                 </div>
-                <h3 className="font-display text-3xl uppercase leading-[0.95] mb-4 group-hover:text-accent transition-colors">
-                  <Link to="/blog/$slug" params={{ slug: post.slug }}>
+                <h3 className="font-display text-3xl lg:text-4xl uppercase leading-[1.1] mb-6">
+                  <Link to="/blog/$slug" params={{ slug: post.slug }} className="before:absolute before:inset-0">
                     {post.title}
                   </Link>
                 </h3>
-                <p className="font-medium opacity-80 mb-8 flex-grow">
+                <p className="font-medium opacity-80 mb-8 flex-grow leading-relaxed">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center gap-4 pt-6 border-t-2 border-ink group-hover:border-paper/20">
-                  <span className="font-bold uppercase text-sm flex-grow">{post.author}</span>
-                  <Link to="/blog/$slug" params={{ slug: post.slug }} className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-accent">
-                    Oku <span className="text-lg">→</span>
-                  </Link>
+                <div className="flex items-center justify-between pt-6 border-t-2 border-ink group-hover:border-paper/20">
+                  <span className="font-bold uppercase text-sm">{post.author}</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-accent group-hover:text-white flex items-center gap-2">Oku <span className="text-lg leading-none">→</span></span>
                 </div>
               </article>
             ))}
