@@ -23,24 +23,51 @@ export const Route = createFileRoute("/")({
               "@type": "WebSite",
               "@id": "https://basin-bulteni.com/#website",
               "url": "https://basin-bulteni.com/",
-              "name": "Breles Dağıtım A.Ş.",
-              "description": "Online Basın Bülteni Dağıtımı Servisi",
+              "name": "Online Basın Bülteni Dağıtımı Servisi | Breles",
+              "alternateName": "Basın Bülteni Dağıtımı",
+              "description": "En iyi online basın bülteni dağıtımı servisi. Haberlerinizi 4500'den fazla küresel yayın organına ve haber ajanslarına ulaştırın.",
+              "keywords": "online basın bülteni dağıtımı servisi, basın bülteni dağıtımı, pr ajansı, bülten gönderme, haber ajanslarına haber servis etme",
               "publisher": {
                 "@id": "https://basin-bulteni.com/#organization"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://basin-bulteni.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
               }
             },
             {
               "@type": "Organization",
               "@id": "https://basin-bulteni.com/#organization",
-              "name": "Breles Dağıtım A.Ş.",
+              "name": "Online Basın Bülteni Dağıtımı Servisi - Breles",
+              "legalName": "Breles İletişim Dağıtım ve Yazılım A.Ş.",
+              "alternateName": ["Breles Basın Bülteni Dağıtımı", "Breles PR Ajansı"],
+              "slogan": "Şirket duyurularınızı küresel manşetlere dönüştürün.",
               "url": "https://basin-bulteni.com",
-              "logo": "https://basin-bulteni.com/logo.png",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://basin-bulteni.com/logo.png",
+                "caption": "Online Basın Bülteni Dağıtımı Servisi"
+              },
+              "image": "https://basin-bulteni.com/logo.png",
+              "sameAs": [
+                "https://twitter.com/brelespr",
+                "https://www.linkedin.com/company/brelespr",
+                "https://www.instagram.com/brelespr"
+              ],
+              "knowsAbout": [
+                "Online Basın Bülteni Dağıtımı",
+                "Halkla İlişkiler (PR)",
+                "Medya İletişimi",
+                "Küresel Haber Dağıtımı",
+                "SEO Odaklı Basın Bülteni"
+              ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+90-212-000-0000",
-                "contactType": "customer service",
-                "areaServed": "TR",
-                "availableLanguage": "Turkish"
+                "contactType": "sales",
+                "areaServed": ["TR", "US", "GB", "DE"],
+                "availableLanguage": ["Turkish", "English"]
               },
               "address": {
                 "@type": "PostalAddress",
@@ -58,9 +85,10 @@ export const Route = createFileRoute("/")({
               "provider": {
                 "@id": "https://basin-bulteni.com/#organization"
               },
-              "description": "Breles ile profesyonel online basın bülteni dağıtımı servisi alın. 4.500'den fazla küresel medya organına anında erişim sağlayan Türkiye'nin en iyi basın bülteni ağı.",
-              "areaServed": "TR",
-              "serviceType": "PR and Media Distribution",
+              "description": "Breles ile profesyonel online basın bülteni dağıtımı servisi alın. 4.500'den fazla küresel medya organına anında erişim sağlayan Türkiye'nin lider bülten dağıtım ağı.",
+              "category": "Public Relations",
+              "areaServed": "Worldwide",
+              "serviceType": "Online Basın Bülteni Dağıtımı Servisi",
               "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "TRY",
@@ -71,7 +99,9 @@ export const Route = createFileRoute("/")({
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
-                "reviewCount": "128"
+                "reviewCount": "128",
+                "bestRating": "5",
+                "worstRating": "1"
               }
             },
             {
@@ -79,7 +109,7 @@ export const Route = createFileRoute("/")({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Bir bülten ne kadar hızlı yayına girer?",
+                  "name": "Online basın bülteni dağıtımı servisi ne kadar hızlı yayına girer?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Bültenlerin çoğu onaylandıktan sonra 60 dakika içinde ajansa düşer. Ambargolu bültenler saniyesine kadar planlanır."
@@ -87,15 +117,15 @@ export const Route = createFileRoute("/")({
                 },
                 {
                   "@type": "Question",
-                  "name": "Yayınlanmayı garanti ediyor musunuz?",
+                  "name": "Online basın bülteni dağıtımı yayınlanmayı garanti ediyor mu?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Premium ve Ajans paketleri AP, Reuters ve Bloomberg terminallerinde garantili sendikasyon içerir."
+                    "text": "Premium ve Ajans paketleri AP, Reuters ve Bloomberg terminallerinde garantili online basın bülteni sendikasyonu içerir."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Nasıl bir raporlama alıyorum?",
+                  "name": "Basın bülteni dağıtım servisi raporlaması nasıl çalışır?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Yerleştirmeler, gösterimler, geri bağlantılar, duygu durumu ve tek tıkla yönetim kuruluna hazır PDF içeren canlı bir gösterge paneli alırsınız."
