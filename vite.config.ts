@@ -11,8 +11,13 @@ export default defineConfig({
     preset: "vercel",
   },
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    server: {
+      fs: {
+        allow: ["/Users/eles/.gemini/antigravity-ide/brain/48ab4e5f-b73a-4b64-a62b-d277a9954760"]
+      }
+    }
+  }
 });
