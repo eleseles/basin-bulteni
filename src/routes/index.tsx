@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
-      { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır." },
+      { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır. En iyi online basın bülteni dağıtımı servisi." },
       { property: "og:title", content: "Online Basın Bülteni Dağıtımı Servisi | Breles" },
       { property: "og:description", content: "Duyurularınızı küresel manşetlere dönüştürün." },
       { property: "og:url", content: "https://basin-bulteni.com" },
@@ -13,6 +13,100 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://basin-bulteni.com" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://basin-bulteni.com/#website",
+              "url": "https://basin-bulteni.com/",
+              "name": "Breles Dağıtım A.Ş.",
+              "description": "Online Basın Bülteni Dağıtımı Servisi",
+              "publisher": {
+                "@id": "https://basin-bulteni.com/#organization"
+              }
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://basin-bulteni.com/#organization",
+              "name": "Breles Dağıtım A.Ş.",
+              "url": "https://basin-bulteni.com",
+              "logo": "https://basin-bulteni.com/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+90-212-000-0000",
+                "contactType": "customer service",
+                "areaServed": "TR",
+                "availableLanguage": "Turkish"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Maslak Mah. Büyükdere Cad. No: 255 Nurol Plaza, Kat: 12",
+                "addressLocality": "Sarıyer",
+                "addressRegion": "İstanbul",
+                "postalCode": "34485",
+                "addressCountry": "TR"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://basin-bulteni.com/#service",
+              "name": "Online Basın Bülteni Dağıtımı Servisi",
+              "provider": {
+                "@id": "https://basin-bulteni.com/#organization"
+              },
+              "description": "Breles ile profesyonel online basın bülteni dağıtımı servisi alın. 4.500'den fazla küresel medya organına anında erişim sağlayan Türkiye'nin en iyi basın bülteni ağı.",
+              "areaServed": "TR",
+              "serviceType": "PR and Media Distribution",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TRY",
+                "lowPrice": "4999",
+                "highPrice": "35000",
+                "offerCount": "3"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "128"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Bir bülten ne kadar hızlı yayına girer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bültenlerin çoğu onaylandıktan sonra 60 dakika içinde ajansa düşer. Ambargolu bültenler saniyesine kadar planlanır."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Yayınlanmayı garanti ediyor musunuz?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Premium ve Ajans paketleri AP, Reuters ve Bloomberg terminallerinde garantili sendikasyon içerir."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Nasıl bir raporlama alıyorum?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yerleştirmeler, gösterimler, geri bağlantılar, duygu durumu ve tek tıkla yönetim kuruluna hazır PDF içeren canlı bir gösterge paneli alırsınız."
+                  }
+                }
+              ]
+            }
+          ]
+        })
+      }
+    ]
   }),
   component: Index,
 });
