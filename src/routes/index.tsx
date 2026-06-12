@@ -286,34 +286,34 @@ function Index() {
           <div className="grid lg:grid-cols-3 border-2 border-ink bg-white">
             <div className="p-10 border-b-2 lg:border-b-0 lg:border-r-2 border-ink flex flex-col">
               <div className="uppercase font-bold tracking-widest text-xs mb-2">Standart</div>
-              <div className="font-display text-6xl mb-8">$499<span className="text-xl">/bülten</span></div>
+              <div className="font-display text-6xl mb-8">4.999 ₺<span className="text-xl">/bülten</span></div>
               <ul className="space-y-3 mb-12 flex-grow font-semibold text-sm">
                 <li>— 400+ Haber Kaynağı</li>
                 <li>— Google Haberler Kapsamı</li>
                 <li>— Standart Analitik</li>
               </ul>
-              <button className="w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Buradan Başlayın</button>
+              <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="block text-center w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Buradan Başlayın</a>
             </div>
             <div className="p-10 border-b-2 lg:border-b-0 lg:border-r-2 border-ink bg-ink text-paper flex flex-col">
               <div className="uppercase font-bold tracking-widest text-xs mb-2 text-accent">En Popüler</div>
-              <div className="font-display text-6xl mb-8 text-white">$1,250<span className="text-xl opacity-50">/bülten</span></div>
+              <div className="font-display text-6xl mb-8 text-white">12.500 ₺<span className="text-xl opacity-50">/bülten</span></div>
               <ul className="space-y-3 mb-12 flex-grow font-semibold text-sm">
                 <li>— 1.200+ Haber Kaynağı</li>
                 <li>— Finansal Akış Dağıtımı</li>
                 <li>— Garantili AP/Reuters Senkronizasyonu</li>
                 <li>— Gelişmiş Multimedya Desteği</li>
               </ul>
-              <button className="w-full bg-accent text-white py-4 font-bold uppercase tracking-tighter hover:bg-white hover:text-ink transition-all">Premium'a Geç</button>
+              <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="block text-center w-full bg-accent text-white py-4 font-bold uppercase tracking-tighter hover:bg-white hover:text-ink transition-all">Premium'a Geç</a>
             </div>
             <div className="p-10 flex flex-col">
               <div className="uppercase font-bold tracking-widest text-xs mb-2">Ajans</div>
-              <div className="font-display text-6xl mb-8">$3,500<span className="text-xl">/aylık</span></div>
+              <div className="font-display text-6xl mb-8">35.000 ₺<span className="text-xl">/aylık</span></div>
               <ul className="space-y-3 mb-12 flex-grow font-semibold text-sm">
                 <li>— Sınırsız Bülten</li>
                 <li>— Özel Müşteri Temsilcisi</li>
                 <li>— White-label Raporlama</li>
               </ul>
-              <button className="w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Satışla İletişime Geç</button>
+              <a href="https://wa.link/8zjo59" target="_blank" rel="noopener noreferrer" className="block text-center w-full border-2 border-ink py-4 font-bold uppercase tracking-tighter hover:bg-ink hover:text-white transition-all">Satışla İletişime Geç</a>
             </div>
           </div>
         </div>
