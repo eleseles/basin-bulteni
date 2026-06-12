@@ -16,7 +16,10 @@ export default defineConfig({
   vite: {
     server: {
       fs: {
-        allow: ["/Users/eles/.gemini/antigravity-ide/brain/48ab4e5f-b73a-4b64-a62b-d277a9954760"]
+        allow: [
+          "/Users/eles/Downloads/basin",
+          "/Users/eles/.gemini/antigravity-ide/brain/48ab4e5f-b73a-4b64-a62b-d277a9954760"
+        ]
       }
     }
   }
