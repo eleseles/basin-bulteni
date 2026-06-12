@@ -123,6 +123,93 @@ function BasinBulteniPaketleri() {
         </div>
       </section>
 
+      {/* 3.2. Popular Packages (Custom grid) */}
+      <section className="bg-white py-24 px-6 border-b-2 border-ink">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-xs font-bold uppercase tracking-widest text-accent mb-3">VIP</div>
+            <h2 className="font-display text-5xl lg:text-7xl uppercase leading-[0.95]">Popüler Paketler</h2>
+            <p className="max-w-2xl mx-auto text-lg font-medium opacity-80 mt-6">
+              Sektörünüze veya hedef kitlenize en uygun, özenle seçilmiş haber sitelerinden oluşan özel dağıtım paketlerimiz.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Basın Bülteni Paketi",
+                sites: ["Haber7.com", "Hurriyet.com.tr", "Cumhuriyet.com.tr", "Dunya.com", "Sozcu.com.tr", "Haberturk.com", "Timeturk.com", "Haberler.com", "Sondakika.com", "ABCgazetesi.com"]
+              },
+              {
+                name: "Finans Paketi",
+                sites: ["Bloomberg HT", "Foreks Haber", "Investing.com", "Mynet Finans", "Dunya.com", "Ekonomim", "Ekonomist", "CNBC-e", "Forbes Türkiye", "Platin Dergisi"]
+              },
+              {
+                name: "Global Paket",
+                sites: ["AFP", "AP", "PA", "DGAP", "ANSA", "Yahoo", "MarketWatch", "Digital Journal", "Benzinga", "Ajman News"]
+              },
+              {
+                name: "Kırmızı Paket",
+                sites: ["Sözcü", "Halk TV", "Tele 1", "Cumhuriyet"]
+              },
+              {
+                name: "Mavi Paket",
+                sites: ["Bloomberg HT", "Ekonomim", "CNBC-e", "Dünya"]
+              },
+              {
+                name: "Sarı Paket",
+                sites: ["Fanatik.com.tr", "FotoMac.com", "Sporx.com", "Ajansspor.com"]
+              },
+              {
+                name: "Beyaz Paket",
+                sites: ["Haber7", "Yeni Şafak", "Yeni Akit", "En Son Haber"]
+              },
+              {
+                name: "Turuncu Paket",
+                sites: ["ShiftDelete", "Webtekno", "DonanımHaber", "Webrazzi"]
+              },
+              {
+                name: "Yeşil Paket",
+                sites: ["SNOB Magazin", "ELLE", "VOGUE", "ALEM"]
+              },
+              {
+                name: "Bordo Paket",
+                sites: ["Türkiye", "TGRT", "Karar", "Akşam"]
+              },
+              {
+                name: "Bağımsız Paket",
+                sites: ["Diken", "T24", "BirGün", "Evrensel"]
+              },
+              {
+                name: "Girişim Paketi",
+                sites: ["Webrazzi", "egirisim", "foundem", "Swipeline"]
+              }
+            ].map((pkg, idx) => (
+              <div key={idx} className="border-2 border-ink flex flex-col hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000000] transition-all duration-300 bg-paper">
+                <div className="p-6 border-b-2 border-ink flex items-center justify-between bg-white">
+                  <h3 className="font-display text-2xl uppercase tracking-tight">{pkg.name}</h3>
+                </div>
+                <div className="p-6 flex-grow bg-white">
+                  <ul className="space-y-3">
+                    {pkg.sites.map(site => (
+                      <li key={site} className="flex gap-3 text-sm font-semibold">
+                        <span className="text-accent">✓</span> {site}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-6 border-t-2 border-ink bg-paper mt-auto">
+                  <button className="w-full flex items-center justify-between border-2 border-ink bg-white px-6 py-3 font-bold uppercase tracking-widest text-xs hover:bg-ink hover:text-white transition-colors group">
+                    İncele
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 3.5. Enterprise CTA */}
       <section className="border-b-2 border-ink bg-accent text-white px-6 py-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
