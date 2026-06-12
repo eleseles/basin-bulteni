@@ -51,17 +51,38 @@ function BasariHikayeleri() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <header className="border-b-2 border-ink px-6 py-24 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-block bg-accent text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6">
-            Ön Sayfalar
+      <header className="border-b-2 border-ink bg-white px-6 py-24 lg:py-32 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[1.5fr_1fr] gap-16 items-center">
+            <div className="relative z-10">
+              <div className="inline-block bg-accent text-white px-4 py-2 text-sm font-bold uppercase tracking-widest mb-8">
+                Kanıtlanmış Sonuçlar
+              </div>
+              <h1 className="font-display text-[clamp(4rem,8vw,7.5rem)] leading-[1.1] uppercase tracking-tighter mb-8">
+                Başarı <br />Hikayeleri
+              </h1>
+              <p className="text-2xl font-medium opacity-80 max-w-xl">
+                Sadece bülten göndermiyoruz. Geliştirdiğimiz doğrudan iletişim altyapısıyla şirketleri kendi sektörlerinin en çok konuşulan markalarına dönüştürüyoruz.
+              </p>
+            </div>
+            
+            <div className="relative z-10">
+              <div className="grid grid-cols-2 gap-2 border-4 border-ink bg-ink p-2 rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="bg-paper p-6 lg:p-8 aspect-square flex flex-col justify-center text-center">
+                  <div className="font-display text-5xl lg:text-6xl text-accent mb-2">4.5K</div>
+                  <div className="text-xs font-bold uppercase tracking-widest opacity-70">Aktif Yayın</div>
+                </div>
+                <div className="bg-accent text-white p-6 lg:p-8 aspect-square flex flex-col justify-center text-center">
+                  <div className="font-display text-5xl lg:text-6xl mb-2">4.8M</div>
+                  <div className="text-xs font-bold uppercase tracking-widest opacity-90">Gösterim</div>
+                </div>
+                <div className="col-span-2 bg-white p-6 lg:p-8 text-center flex flex-col justify-center">
+                  <div className="font-display text-4xl lg:text-5xl uppercase leading-none mb-2">Küresel Etki</div>
+                  <div className="text-xs font-bold uppercase tracking-widest opacity-60">180 Ülkede Dağıtım</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h1 className="font-display text-6xl lg:text-8xl uppercase leading-[0.9] tracking-tighter mb-8">
-            Başarı<br />Hikayeleri
-          </h1>
-          <p className="text-xl font-medium opacity-80 max-w-2xl mx-auto">
-            Sadece bülten göndermiyoruz. Şirketleri kendi sektörlerinin en çok konuşulan isimlerine dönüştürüyoruz.
-          </p>
         </div>
       </header>
 
