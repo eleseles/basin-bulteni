@@ -9,12 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SartlarRouteImport } from './routes/sartlar'
+import { Route as IletisimRouteImport } from './routes/iletisim'
+import { Route as HakkimizdaRouteImport } from './routes/hakkimizda'
+import { Route as GizlilikRouteImport } from './routes/gizlilik'
+import { Route as DagitimAgiRouteImport } from './routes/dagitim-agi'
 import { Route as BasinBulteniPaketleriRouteImport } from './routes/basin-bulteni-paketleri'
+import { Route as BasariHikayeleriRouteImport } from './routes/basari-hikayeleri'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 
+const SartlarRoute = SartlarRouteImport.update({
+  id: '/sartlar',
+  path: '/sartlar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IletisimRoute = IletisimRouteImport.update({
+  id: '/iletisim',
+  path: '/iletisim',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HakkimizdaRoute = HakkimizdaRouteImport.update({
+  id: '/hakkimizda',
+  path: '/hakkimizda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GizlilikRoute = GizlilikRouteImport.update({
+  id: '/gizlilik',
+  path: '/gizlilik',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DagitimAgiRoute = DagitimAgiRouteImport.update({
+  id: '/dagitim-agi',
+  path: '/dagitim-agi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BasinBulteniPaketleriRoute = BasinBulteniPaketleriRouteImport.update({
   id: '/basin-bulteni-paketleri',
   path: '/basin-bulteni-paketleri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BasariHikayeleriRoute = BasariHikayeleriRouteImport.update({
+  id: '/basari-hikayeleri',
+  path: '/basari-hikayeleri',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -22,40 +60,155 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/basari-hikayeleri': typeof BasariHikayeleriRoute
   '/basin-bulteni-paketleri': typeof BasinBulteniPaketleriRoute
+  '/dagitim-agi': typeof DagitimAgiRoute
+  '/gizlilik': typeof GizlilikRoute
+  '/hakkimizda': typeof HakkimizdaRoute
+  '/iletisim': typeof IletisimRoute
+  '/sartlar': typeof SartlarRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/basari-hikayeleri': typeof BasariHikayeleriRoute
   '/basin-bulteni-paketleri': typeof BasinBulteniPaketleriRoute
+  '/dagitim-agi': typeof DagitimAgiRoute
+  '/gizlilik': typeof GizlilikRoute
+  '/hakkimizda': typeof HakkimizdaRoute
+  '/iletisim': typeof IletisimRoute
+  '/sartlar': typeof SartlarRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/basari-hikayeleri': typeof BasariHikayeleriRoute
   '/basin-bulteni-paketleri': typeof BasinBulteniPaketleriRoute
+  '/dagitim-agi': typeof DagitimAgiRoute
+  '/gizlilik': typeof GizlilikRoute
+  '/hakkimizda': typeof HakkimizdaRoute
+  '/iletisim': typeof IletisimRoute
+  '/sartlar': typeof SartlarRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/basin-bulteni-paketleri'
+  fullPaths:
+    | '/'
+    | '/basari-hikayeleri'
+    | '/basin-bulteni-paketleri'
+    | '/dagitim-agi'
+    | '/gizlilik'
+    | '/hakkimizda'
+    | '/iletisim'
+    | '/sartlar'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/basin-bulteni-paketleri'
-  id: '__root__' | '/' | '/basin-bulteni-paketleri'
+  to:
+    | '/'
+    | '/basari-hikayeleri'
+    | '/basin-bulteni-paketleri'
+    | '/dagitim-agi'
+    | '/gizlilik'
+    | '/hakkimizda'
+    | '/iletisim'
+    | '/sartlar'
+    | '/blog/$slug'
+    | '/blog'
+  id:
+    | '__root__'
+    | '/'
+    | '/basari-hikayeleri'
+    | '/basin-bulteni-paketleri'
+    | '/dagitim-agi'
+    | '/gizlilik'
+    | '/hakkimizda'
+    | '/iletisim'
+    | '/sartlar'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BasariHikayeleriRoute: typeof BasariHikayeleriRoute
   BasinBulteniPaketleriRoute: typeof BasinBulteniPaketleriRoute
+  DagitimAgiRoute: typeof DagitimAgiRoute
+  GizlilikRoute: typeof GizlilikRoute
+  HakkimizdaRoute: typeof HakkimizdaRoute
+  IletisimRoute: typeof IletisimRoute
+  SartlarRoute: typeof SartlarRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sartlar': {
+      id: '/sartlar'
+      path: '/sartlar'
+      fullPath: '/sartlar'
+      preLoaderRoute: typeof SartlarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iletisim': {
+      id: '/iletisim'
+      path: '/iletisim'
+      fullPath: '/iletisim'
+      preLoaderRoute: typeof IletisimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hakkimizda': {
+      id: '/hakkimizda'
+      path: '/hakkimizda'
+      fullPath: '/hakkimizda'
+      preLoaderRoute: typeof HakkimizdaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gizlilik': {
+      id: '/gizlilik'
+      path: '/gizlilik'
+      fullPath: '/gizlilik'
+      preLoaderRoute: typeof GizlilikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dagitim-agi': {
+      id: '/dagitim-agi'
+      path: '/dagitim-agi'
+      fullPath: '/dagitim-agi'
+      preLoaderRoute: typeof DagitimAgiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/basin-bulteni-paketleri': {
       id: '/basin-bulteni-paketleri'
       path: '/basin-bulteni-paketleri'
       fullPath: '/basin-bulteni-paketleri'
       preLoaderRoute: typeof BasinBulteniPaketleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/basari-hikayeleri': {
+      id: '/basari-hikayeleri'
+      path: '/basari-hikayeleri'
+      fullPath: '/basari-hikayeleri'
+      preLoaderRoute: typeof BasariHikayeleriRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -65,12 +218,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BasariHikayeleriRoute: BasariHikayeleriRoute,
   BasinBulteniPaketleriRoute: BasinBulteniPaketleriRoute,
+  DagitimAgiRoute: DagitimAgiRoute,
+  GizlilikRoute: GizlilikRoute,
+  HakkimizdaRoute: HakkimizdaRoute,
+  IletisimRoute: IletisimRoute,
+  SartlarRoute: SartlarRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -5,30 +5,56 @@ export const Route = createFileRoute("/basin-bulteni-paketleri")({
     meta: [
       { title: "Basın Bülteni Paketleri ve Fiyatları | Breles" },
       { name: "description", content: "İhtiyacınıza uygun basın bülteni dağıtım paketleri. Standart, Premium ve Ajans paketlerimizi inceleyin." },
+      { property: "og:url", content: "https://basin-bulteni.com/basin-bulteni-paketleri" },
     ],
+    links: [
+      { rel: "canonical", href: "https://basin-bulteni.com/basin-bulteni-paketleri" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Breles Basın Bülteni Dağıtımı",
+          "description": "Premium haber yayın organlarına ve finansal terminallere garantili basın bülteni dağıtım hizmeti.",
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "3",
+            "lowPrice": "499",
+            "highPrice": "3500",
+            "priceCurrency": "USD",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Standart Paket",
+                "price": "499",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "name": "Premium Paket",
+                "price": "1250",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "name": "Ajans Paketi",
+                "price": "3500",
+                "priceCurrency": "USD"
+              }
+            ]
+          }
+        })
+      }
+    ]
   }),
   component: BasinBulteniPaketleri,
 });
 
 function BasinBulteniPaketleri() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
-      {/* 1. Nav */}
-      <nav className="sticky top-0 z-50 bg-background border-b-2 border-ink px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="font-display text-3xl tracking-tighter uppercase hover:text-accent transition-colors">
-          Breles
-        </Link>
-        <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
-          <Link to="/" className="hover:text-accent transition-colors">Ana Sayfa</Link>
-          <a href="/#distribution" className="hover:text-accent transition-colors">Dağıtım</a>
-          <Link to="/basin-bulteni-paketleri" className="text-accent transition-colors">Fiyatlandırma</Link>
-          <a href="/#faq" className="hover:text-accent transition-colors">SSS</a>
-        </div>
-        <button className="bg-ink text-paper px-6 py-2 text-sm font-bold uppercase tracking-tighter hover:bg-accent transition-colors">
-          Bülten Gönder
-        </button>
-      </nav>
-
+    <>
       {/* 2. Hero */}
       <header className="border-b-2 border-ink px-6 py-24 bg-white">
         <div className="max-w-7xl mx-auto text-center">
@@ -36,7 +62,7 @@ function BasinBulteniPaketleri() {
             Şeffaf Fiyatlandırma
           </div>
           <h1 className="font-display text-[clamp(4rem,8vw,8rem)] leading-[0.85] uppercase tracking-tighter mb-8">
-            Etkinize Uygun<br />Paketler
+            Basın Bülteni <br />Paketleri
           </h1>
           <p className="max-w-2xl mx-auto text-xl font-medium opacity-80">
             Gizli ücret yok, sürpriz yok. Sadece haberinizin ulaşmasını istediğiniz kitleye göre tasarlanmış saf dağıtım gücü.
@@ -262,30 +288,6 @@ function BasinBulteniPaketleri() {
         </div>
       </section>
 
-      {/* 5. Footer */}
-      <footer className="bg-ink text-paper py-32 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-[clamp(3rem,8vw,6rem)] leading-[0.9] uppercase mb-12">
-            Kararınızı<br />Verdiniz mi?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-accent text-white px-12 py-6 text-xl font-display uppercase tracking-widest hover:scale-105 transition-transform">
-              Paket Seç ve Başla
-            </button>
-            <Link to="/" className="border-2 border-white/20 px-12 py-6 text-xl font-display uppercase tracking-widest hover:border-white transition-colors inline-block">
-              Ana Sayfaya Dön
-            </Link>
-          </div>
-          <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 text-xs font-bold uppercase tracking-widest opacity-50">
-            <div>&copy; 2026 Breles Dağıtım A.Ş.</div>
-            <div className="flex gap-12">
-              <a href="#">Şartlar</a>
-              <a href="#">Gizlilik</a>
-              <a href="#">Bize Ulaşın</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }

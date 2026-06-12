@@ -8,6 +8,10 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Breles, basın bülteninizi 4.500'den fazla premium yayın organı, haber ajansı ve birinci sınıf editör masasına dağıtır." },
       { property: "og:title", content: "Breles — Online Basın Bülteni Dağıtımı" },
       { property: "og:description", content: "Duyurularınızı küresel manşetlere dönüştürün." },
+      { property: "og:url", content: "https://basin-bulteni.com" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://basin-bulteni.com" },
     ],
   }),
   component: Index,
@@ -17,20 +21,7 @@ const outlets = ["Bloomberg", "The Verge", "TechCrunch", "Reuters", "Forbes", "W
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
-      {/* 1. Nav */}
-      <nav className="sticky top-0 z-50 bg-background border-b-2 border-ink px-6 py-4 flex justify-between items-center">
-        <span className="font-display text-3xl tracking-tighter uppercase">Breles</span>
-        <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
-          <a href="#distribution" className="hover:text-accent transition-colors">Dağıtım</a>
-          <Link to="/basin-bulteni-paketleri" className="hover:text-accent transition-colors">Fiyatlandırma</Link>
-          <a href="#faq" className="hover:text-accent transition-colors">SSS</a>
-        </div>
-        <button className="bg-ink text-paper px-6 py-2 text-sm font-bold uppercase tracking-tighter hover:bg-accent transition-colors">
-          Bülten Gönder
-        </button>
-      </nav>
-
+    <>
       {/* 2. Hero */}
       <header className="relative border-b-2 border-ink">
         <div className="grid lg:grid-cols-[1fr_440px]">
@@ -38,8 +29,8 @@ function Index() {
             <div className="inline-block self-start bg-accent text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6 animate-ink">
               Doğrudan Dağıtım Motoru
             </div>
-            <h1 className="font-display text-[clamp(4rem,12vw,10rem)] leading-[0.85] uppercase tracking-tighter animate-ink [animation-delay:100ms]">
-              Basın<br />Yoluyla<br />Etki
+            <h1 className="font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.85] uppercase tracking-tighter animate-ink [animation-delay:100ms]">
+              Online Basın <br />Bülteni Dağıtımı <br />Servisi
             </h1>
             <p className="mt-8 max-w-xl text-xl font-medium leading-tight text-pretty animate-ink [animation-delay:200ms]">
               Breles, şirket duyurularınızı küresel manşetlere dönüştürür. Sadece e-posta göndermiyoruz — 4.500'den fazla premium yayında dikkatleri üzerinize çekiyoruz.
@@ -219,7 +210,7 @@ function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
             <h2 className="font-display text-6xl lg:text-7xl uppercase">Ön Sayfalar</h2>
-            <a href="#" className="hidden md:inline-block text-sm font-bold uppercase tracking-widest hover:text-accent">Tüm başarı hikayeleri →</a>
+            <Link to="/basari-hikayeleri" className="hidden md:inline-block text-sm font-bold uppercase tracking-widest hover:text-accent">Tüm başarı hikayeleri →</Link>
           </div>
           <div className="grid md:grid-cols-3 border-2 border-ink">
             {[
@@ -402,25 +393,27 @@ function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
             <h2 className="font-display text-5xl lg:text-6xl uppercase">Masadan Notlar</h2>
-            <a href="#" className="hidden md:inline-block text-sm font-bold uppercase tracking-widest hover:text-accent">Tüm makaleler →</a>
+            <Link to="/blog" className="hidden md:inline-block text-sm font-bold uppercase tracking-widest hover:text-accent">Tüm makaleler →</Link>
           </div>
           <div className="grid md:grid-cols-3 gap-0 border-2 border-ink bg-white">
             {[
-              { tag: "Rehber", date: "10 Haz", h: "Gazetecilerin gerçekten açtığı bir bülten yazmak" },
-              { tag: "Saha Notları", date: "28 May", h: "Ambargonun içi: Bir Seri B hikayesi nasıl patlar" },
-              { tag: "Veri", date: "14 May", h: "Yayınlanma oranınızı üçe katlayan 7 fiil" },
+              { tag: "Rehber", date: "10 Haz", h: "Gazetecilerin gerçekten açtığı bir bülten yazmak", slug: "mukemmel-basin-bulteni-nasil-yazilir" },
+              { tag: "Saha Notları", date: "28 May", h: "Ambargonun içi: Bir Seri B hikayesi nasıl patlar", slug: "ambargo-stratejisiyle-hikaye-patlatmak" },
+              { tag: "Veri", date: "14 May", h: "Yayınlanma oranınızı üçe katlayan 7 fiil", slug: "yayinlanma-oranini-artiran-fiiller" },
             ].map((a, i) => (
-              <article
+              <Link
+                to="/blog/$slug"
+                params={{ slug: a.slug }}
                 key={a.h}
-                className={`p-8 ${i < 2 ? "md:border-r-2 border-b-2 md:border-b-0" : ""} border-ink hover:bg-ink hover:text-paper transition-colors group`}
+                className={`p-8 ${i < 2 ? "md:border-r-2 border-b-2 md:border-b-0" : ""} border-ink hover:bg-ink hover:text-paper transition-colors group flex flex-col`}
               >
                 <div className="flex items-center justify-between text-xs font-bold uppercase tracking-widest opacity-70 mb-8">
                   <span>{a.tag}</span>
                   <span>{a.date}</span>
                 </div>
                 <h3 className="font-display text-3xl uppercase leading-tight mb-12">{a.h}</h3>
-                <span className="text-xs font-bold uppercase tracking-widest">Makaleyi oku →</span>
-              </article>
+                <span className="text-xs font-bold uppercase tracking-widest mt-auto">Makaleyi oku →</span>
+              </Link>
             ))}
           </div>
         </div>
@@ -449,30 +442,6 @@ function Index() {
         </div>
       </section>
 
-      {/* 19. Final CTA / Footer */}
-      <footer className="bg-ink text-paper py-32 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-[clamp(3rem,8vw,6rem)] leading-[0.9] uppercase mb-12">
-            Mirasınızı<br />yazdırmaya hazır mısınız?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-accent text-white px-12 py-6 text-xl font-display uppercase tracking-widest hover:scale-105 transition-transform">
-              Hemen Bülten Gönder
-            </button>
-            <button className="border-2 border-white/20 px-12 py-6 text-xl font-display uppercase tracking-widest hover:border-white transition-colors">
-              Ağ Haritasını Görüntüle
-            </button>
-          </div>
-          <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 text-xs font-bold uppercase tracking-widest opacity-50">
-            <div>&copy; 2026 Breles Dağıtım A.Ş.</div>
-            <div className="flex gap-12">
-              <a href="#">Şartlar</a>
-              <a href="#">Gizlilik</a>
-              <a href="#">Gazeteci Erişimi</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
